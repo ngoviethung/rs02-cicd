@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 Route::group(['middleware' => 'jwt.verify'], function () {
     Route::get('home', 'Api\CategoryController@home');
 	
+	
     Route::get('search', 'Api\CategoryController@search');
     Route::post('update_personnalize', 'Api\UserController@updatePersonnalize');
     Route::get('get_personnalize', 'Api\CategoryController@getPersonnalize');
